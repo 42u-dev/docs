@@ -1,0 +1,118 @@
+site_name: 42u Docs
+site_description: 42u Documentation Site
+site_author: 42u-dev
+repo_name: GitHub
+repo_url: https://github.com/42u-dev/docs
+edit_uri: edit/main/docs/
+site_url: https://rtfm.42u.dev
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs # Top-level navigation tabs
+    - navigation.sections # Render top-level sections as groups
+    - navigation.top # Back to top button
+    - navigation.tracking # URL updates with active anchor
+    - navigation.instant # Instant navigation
+    - navigation.path # Breadcrumbs
+    - navigation.indexes # Section index pages
+    - navigation.footer # Add previous and next page buttons to footer
+    - search.suggest # Search suggestions
+    - search.highlight # Highlight search terms on page
+    - search.share # Share search link
+    - content.code.copy # Code block copy buttons
+    - content.code.annotate # Code annotations
+    - content.tabs.link # Link content tabs
+    - toc.follow # TOC follows scroll position
+
+  icon:
+    repo: fontawesome/brands/github
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+plugins:
+  - search:
+      lang: en
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      count_empty_lines: false
+
+markdown_extensions:
+  - abbr # Abbreviations
+  - admonition # Callouts/admonitions
+  - attr_list # Attribute lists
+  - def_list # Definition lists
+  - footnotes # Footnotes
+  - md_in_html # Markdown in HTML
+  - tables # Tables
+  - toc:
+      permalink: true # Permalink anchors on headings
+      permalink_title: "Link to this section"
+      toc_depth: 3
+
+  - pymdownx.arithmatex: # Math support
+      generic: true
+  - pymdownx.betterem: # Better emphasis
+      smart_enable: all
+  - pymdownx.caret # Insert/superscript
+  - pymdownx.details # Collapsible details
+  - pymdownx.highlight: # Code highlighting
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+  - pymdownx.inlinehilite # Inline code highlighting
+  - pymdownx.keys # Keyboard keys
+  - pymdownx.mark # Highlighting/marking text
+  - pymdownx.smartsymbols # Smart symbols
+  - pymdownx.snippets # Include external files
+  - pymdownx.superfences: # Fenced code blocks with nesting
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tabbed: # Content tabs
+      alternate_style: true
+  - pymdownx.tasklist: # Task lists
+      custom_checkbox: true
+  - pymdownx.tilde # Delete/subscript
+
+# Commented out for auto nav
+# nav:
+#   - Home: index.md
+#   - Getting Started: getting-started.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/42u-dev
+  generator: true
+
+extra_css:
+  - stylesheets/theme.css
+extra_javascript: []

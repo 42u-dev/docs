@@ -121,3 +121,7 @@ At the OS level, the Zabbix agent is utilized to pull deeper metrics and expose 
 Certain services and misc. resources (e.g. SSL certificates) are also monitored.
 
 All alerts are sent to Pushover.
+
+## WireGuard
+
+WireGuard VPN is used for secure remote access and site-to-site routing between local and cloud resources.
